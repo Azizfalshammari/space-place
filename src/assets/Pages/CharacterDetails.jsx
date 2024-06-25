@@ -5,7 +5,6 @@ import { Link, useParams } from "react-router-dom";
 function CharacterDetails() {
   const { id } = useParams();
   const [character, setCharacter] = useState(null);
-  document.title('character Details')
 
   useEffect(() => {
     axios
@@ -35,7 +34,7 @@ function CharacterDetails() {
           <p>Gender: {character.gender}</p>
           <p>Origin: {character.origin}</p>
           <p>Abilities: {character.abilities.slice(0, 2).join(", ")}</p>
-          <Link to={'/'}>
+          <Link to={"/"}>
             <button className="btn btn-primary">Return</button>
           </Link>
         </div>
