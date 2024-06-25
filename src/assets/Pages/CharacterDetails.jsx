@@ -5,6 +5,7 @@ import { Link, useParams } from "react-router-dom";
 function CharacterDetails() {
   const { id } = useParams();
   const [character, setCharacter] = useState(null);
+  document.title('character Details')
 
   useEffect(() => {
     axios
